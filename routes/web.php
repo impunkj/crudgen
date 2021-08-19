@@ -24,3 +24,11 @@ Auth::routes();
 Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
+
+
+Route::resource('users', 'UserController')->middleware('auth');
+
+
+Route::resource('patientInformations', App\Http\Controllers\patientInformationsController::class);
+
+Route::resource('patientInformations', App\Http\Controllers\patientInformationsController::class);
