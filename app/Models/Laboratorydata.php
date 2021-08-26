@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Laboratorydata
  * @package App\Models
- * @version August 19, 2021, 4:20 am UTC
+ * @version August 23, 2021, 2:16 pm UTC
  *
  * @property integer $patientNo
  * @property string $GFR
@@ -158,44 +158,6 @@ class Laboratorydata extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'GFR' => 'required|string|max:256',
-        'other' => 'required|string',
-        'Hgb' => 'required|string|max:56',
-        'Glucose' => 'required|string|max:56',
-        'Protein' => 'required|string|max:56',
-        'xRay' => 'required|string|max:56',
-        'HIV' => 'required|string|max:56',
-        'PVC' => 'required|string|max:56',
-        'Urea' => 'required|string|max:56',
-        'Alb' => 'required|string|max:56',
-        'ECG' => 'required|string|max:56',
-        'HBSAg' => 'required|string|max:56',
-        'WBC' => 'required|string|max:56',
-        'Creat' => 'required|string|max:56',
-        'totalBill' => 'required|string|max:56',
-        '2DEcho' => 'required|string|max:56',
-        'HCV' => 'required|string|max:56',
-        'Plate' => 'required|string|max:56',
-        'Na' => 'required|string|max:56',
-        'dirBill' => 'required|string|max:56',
-        'others' => 'required|string|max:56',
-        'stressAngio' => 'required|string|max:56',
-        'PT' => 'required|string|max:56',
-        'K' => 'required|string|max:56',
-        'LDH' => 'required|string|max:56',
-        'other1' => 'required|string|max:56',
-        'allergies' => 'required|string',
-        'PTT' => 'required|string|max:56',
-        'Ca' => 'required|string|max:56',
-        'alkPhos' => 'required|string|max:56',
-        'other2' => 'required|string|max:56',
-        'INR' => 'required|string|max:56',
-        'Mg' => 'required|string|max:56',
-        'Amylase' => 'required|string|max:56',
-        'other3' => 'required|string|max:56',
-        'status' => 'required|string|max:10',
-        'created_at' => 'required',
-        'updated_at' => 'required'
     ];
 
     

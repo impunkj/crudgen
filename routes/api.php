@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\API\patientReportAPIController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('events', '\App\Http\Controllers\API\EventsAPIController');
 
-Route::resource('laboratorydatas', App\Http\Controllers\API\LaboratorydataAPIController::class);
+Route::resource('laboratorydatas', '\App\Http\Controllers\API\LaboratorydataAPIController');
+
+Route::resource('patient_informations', '\App\Http\Controllers\API\patientInformationAPIController');
+
+Route::get('patientreport', [patientReportAPIController::class, 'generatePDFreport']);

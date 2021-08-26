@@ -54,7 +54,6 @@ class LaboratorydataAPIController extends AppBaseController
     public function store(CreateLaboratorydataAPIRequest $request)
     {
         $input = $request->all();
-
         $laboratorydata = $this->laboratorydataRepository->create($input);
 
         return $this->sendResponse($laboratorydata->toArray(), 'Laboratorydata saved successfully');

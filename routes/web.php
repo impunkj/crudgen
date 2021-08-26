@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\API\patientReportAPIController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +32,5 @@ Route::resource('users', 'UserController')->middleware('auth');
 Route::resource('patientInformations', App\Http\Controllers\patientInformationsController::class);
 
 Route::resource('patientInformations', App\Http\Controllers\patientInformationsController::class);
+
+Route::get('patientreport', [patientReportAPIController::class, 'generatePDFreport']);

@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class LaboratorydataRepository
  * @package App\Repositories
- * @version August 19, 2021, 4:20 am UTC
+ * @version August 23, 2021, 2:16 pm UTC
 */
 
 class LaboratorydataRepository extends BaseRepository
