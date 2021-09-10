@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Format</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
     <style>
         *{font-family: 'Roboto', sans-serif;}
         .column {
@@ -23,6 +20,23 @@
   display: table;
   clear: both;
 }
+
+.first-col, .second-col{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 48.5%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    float: left;
+}
+.second-col{padding-right: 0;}
+/* .second-col{float: left;  -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 48.5%;} */
 
 /* .container{max-width: 1040px;     margin: 0 auto;} */
 table {
@@ -58,7 +72,7 @@ table th {
 
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 first-col">
             <p style="text-align: center; font-weight:bold; font-size: 18px;"> Pre Operative Anesthetic Evaluation </p>
             <table>
                 <tr>
@@ -69,21 +83,22 @@ table th {
                 </tr>
                 <tr>
                     <th> Age: 40yr </th>
-                    <th> Sex : M </th>
-                    <th> Ht: </th>
-                    <th> Wt: </th>
-                    <th> BMI: </th>
+                    <th> Sex : <?php echo $gender ?> </th>
+                    <th> Ht: <?php  echo $height; ?></th>
+                    <th> Wt: <?php  echo $weight; ?></th>
+                    <th> BMI: <?php  echo $BMI; ?></th>
                 </tr>
             </table>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 second-col">
             <table class="without-border-table" style="border: 1px solid #a5a5a5;">
                 <tr>
                     <th colspan="4" style="border-bottom: 1px solid #a5a5a5 !important;"> Facility </th>
                 </tr>
+		
                 <tr>
-                    <th> Patient Name: </th>
-                    <td> Gumbie Berry </td>
+                    <th> Patienst Name: </th>
+                    <td><?php echo $name ?></td>
                     <td></td>
                     <td> </td>
                 </tr>
@@ -105,6 +120,8 @@ table th {
                     <td></td>
                     <td> </td>
                 </tr>
+		
+		        
             </table>
         </div>
 

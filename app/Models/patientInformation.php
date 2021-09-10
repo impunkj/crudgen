@@ -9,14 +9,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class patientInformation
  * @package App\Models
- * @version August 25, 2021, 4:10 pm UTC
+ * @version September 10, 2021, 6:25 am UTC
  *
  * @property string|\Carbon\Carbon $dateOfAdmission
  * @property string $timeOfAdmission
+ * @property string $hospitalName
+ * @property integer $age
+ * @property integer $pincode
  * @property string $name
  * @property string|\Carbon\Carbon $dateOfBirth
  * @property string $gender
- * @property string $IP
+ * @property string $registerNumber
  * @property string $proposedOperation
  * @property string $preOperativeDiagnosis
  * @property string $BP
@@ -26,15 +29,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $weight
  * @property string $BMI
  * @property string $ASAPhysicalStatus
+ * @property integer $isemergency
+ * @property string $allergies
  * @property string $status
  */
 class patientInformation extends Model
 {
     use SoftDeletes;
+
+    use HasFactory;
 	
 	public $timestamps = true;
 
-    use HasFactory;
 
     public $table = 'patientinformation';
     
@@ -49,10 +55,13 @@ class patientInformation extends Model
     public $fillable = [
         'dateOfAdmission',
         'timeOfAdmission',
+        'hospitalName',
+        'age',
+        'pincode',
         'name',
         'dateOfBirth',
         'gender',
-        'IP',
+        'registerNumber',
         'proposedOperation',
         'preOperativeDiagnosis',
         'BP',
@@ -62,6 +71,8 @@ class patientInformation extends Model
         'weight',
         'BMI',
         'ASAPhysicalStatus',
+        'isemergency',
+        'allergies',
         'status'
     ];
 
@@ -74,10 +85,13 @@ class patientInformation extends Model
         'patientNo' => 'integer',
         'dateOfAdmission' => 'datetime',
         'timeOfAdmission' => 'string',
+        'hospitalName' => 'string',
+        'age' => 'integer',
+        'pincode' => 'integer',
         'name' => 'string',
         'dateOfBirth' => 'datetime',
         'gender' => 'string',
-        'IP' => 'string',
+        'registerNumber' => 'string',
         'proposedOperation' => 'string',
         'preOperativeDiagnosis' => 'string',
         'BP' => 'string',
@@ -87,6 +101,8 @@ class patientInformation extends Model
         'weight' => 'string',
         'BMI' => 'string',
         'ASAPhysicalStatus' => 'string',
+        'isemergency' => 'integer',
+        'allergies' => 'string',
         'status' => 'string'
     ];
 
@@ -98,20 +114,26 @@ class patientInformation extends Model
     public static $rules = [
         'dateOfAdmission' => 'nullable',
         'timeOfAdmission' => 'nullable|string|max:30',
+        'hospitalName' => 'nullable|string|max:25',
+        'age' => 'required|integer',
+        'pincode' => 'nullable|integer',
         'name' => 'nullable|string|max:56',
         'dateOfBirth' => 'nullable',
-        'gender' => 'nullable|string|max:10',
-        'IP' => 'nullable|string',
+        'gender' => 'required|string|max:10',
+        'registerNumber' => 'nullable|string|max:255',
         'proposedOperation' => 'nullable|string',
         'preOperativeDiagnosis' => 'nullable|string',
-        'BP' => 'nullable|string|max:56',
-        'HR' => 'nullable|string|max:56',
-        'sao2' => 'nullable|string|max:56',
+        'BP' => 'required|string|max:56',
+        'HR' => 'required|string|max:56',
+        'sao2' => 'required|string|max:56',
         'height' => 'nullable|string|max:56',
-        'weight' => 'nullable|string|max:56',
+        'weight' => 'required|string|max:56',
         'BMI' => 'nullable|string|max:56',
-        'ASAPhysicalStatus' => 'nullable|string|max:20',
-        'status' => 'nullable|string|max:10'
+        'ASAPhysicalStatus' => 'nullable|string|max:5',
+        'isemergency' => 'nullable|integer',
+        'allergies' => 'nullable|string',
+        'status' => 'nullable|string|max:10',
+        'deleted_at' => 'nullable'
     ];
 
     

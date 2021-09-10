@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class LaboratorydataRepository
  * @package App\Repositories
- * @version August 23, 2021, 2:16 pm UTC
+ * @version September 10, 2021, 10:48 am UTC
 */
 
 class LaboratorydataRepository extends BaseRepository
@@ -18,41 +18,33 @@ class LaboratorydataRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'patientNo',
-        'GFR',
-        'other',
-        'Hgb',
-        'Glucose',
-        'Protein',
-        'xRay',
-        'HIV',
-        'PVC',
-        'Urea',
-        'Alb',
-        'ECG',
-        'HBSAg',
-        'WBC',
-        'Creat',
         'totalBill',
-        '2DEcho',
-        'HCV',
-        'Plate',
-        'Na',
         'dirBill',
-        'others',
-        'stressAngio',
-        'PT',
-        'K',
-        'LDH',
-        'other1',
-        'allergies',
-        'PTT',
-        'Ca',
         'alkPhos',
-        'other2',
-        'INR',
+        'sgot',
+        'sgpt',
+        'Ldh',
+        'Urea',
+        'Creatine',
+        'Na',
+        'K',
+        'Ca',
         'Mg',
-        'Amylase',
-        'other3',
+        'Hb',
+        'WBC',
+        'Platelets',
+        'Pcv',
+        'Alb',
+        'Protein',
+        'APTT',
+        'PT',
+        'INR',
+        'Rbs',
+        'Ppbs',
+        'Hba',
+        'Ecg',
+        'ChestXray',
+        'Other',
         'status'
     ];
 

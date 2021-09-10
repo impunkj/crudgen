@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class patientInformationRepository
  * @package App\Repositories
- * @version August 25, 2021, 4:10 pm UTC
+ * @version September 10, 2021, 6:25 am UTC
 */
 
 class patientInformationRepository extends BaseRepository
@@ -19,10 +19,13 @@ class patientInformationRepository extends BaseRepository
     protected $fieldSearchable = [
         'dateOfAdmission',
         'timeOfAdmission',
+        'hospitalName',
+        'age',
+        'pincode',
         'name',
         'dateOfBirth',
         'gender',
-        'IP',
+        'registerNumber',
         'proposedOperation',
         'preOperativeDiagnosis',
         'BP',
@@ -32,6 +35,8 @@ class patientInformationRepository extends BaseRepository
         'weight',
         'BMI',
         'ASAPhysicalStatus',
+        'isemergency',
+        'allergies',
         'status'
     ];
 

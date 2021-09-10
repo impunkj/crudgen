@@ -19,9 +19,10 @@ class patientReportAPIController extends AppBaseController
 	public function generatePDFreport(Request $request){
 	  
       $patientID = $request->patientID;	  
+	  $pationinfo = patientInformation::where('patientNo', $patientID)->first();
+	  $data = $pationinfo->getOriginal();
 	  $now = \Carbon\Carbon::now();	
 	  $curent_date =  $now->format('Y-m-d');
-	  $data = array('hee'=> '1');
 	  view()->share('patients',$data);
       $pdf = PDF::loadView('pdfView', $data);
 	  $pathtosaved = public_path().'/pdf/patientID' . $patientID . '/';
