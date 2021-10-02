@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class LaboratorydataRepository
  * @package App\Repositories
- * @version September 10, 2021, 10:48 am UTC
+ * @version September 30, 2021, 5:28 am UTC
 */
 
 class LaboratorydataRepository extends BaseRepository
@@ -42,7 +42,16 @@ class LaboratorydataRepository extends BaseRepository
         'Rbs',
         'Ppbs',
         'Hba',
+        'hiv',
+        'hbsag',
+        'hcv',
+        'rtpcr',
+        'other1',
+        'other2',
+        'other3',
+        'other4',
         'Ecg',
+        'cardiacEcho',
         'ChestXray',
         'Other',
         'status'

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Laboratorydata
  * @package App\Models
- * @version September 10, 2021, 10:48 am UTC
+ * @version September 30, 2021, 5:28 am UTC
  *
  * @property integer $patientNo
  * @property string $totalBill
@@ -36,7 +36,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $Rbs
  * @property string $Ppbs
  * @property string $Hba
+ * @property integer $hiv
+ * @property integer $hbsag
+ * @property integer $hcv
+ * @property integer $rtpcr
+ * @property string $other1
+ * @property string $other2
+ * @property string $other3
+ * @property string $other4
  * @property string $Ecg
+ * @property string $cardiacEcho
  * @property string $ChestXray
  * @property string $Other
  * @property string $status
@@ -49,6 +58,8 @@ class Laboratorydata extends Model
 
     public $table = 'laboratorydata';
     
+	public $timestamps = true;
+	
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -83,7 +94,16 @@ class Laboratorydata extends Model
         'Rbs',
         'Ppbs',
         'Hba',
+        'hiv',
+        'hbsag',
+        'hcv',
+        'rtpcr',
+        'other1',
+        'other2',
+        'other3',
+        'other4',
         'Ecg',
+        'cardiacEcho',
         'ChestXray',
         'Other',
         'status'
@@ -121,7 +141,16 @@ class Laboratorydata extends Model
         'Rbs' => 'string',
         'Ppbs' => 'string',
         'Hba' => 'string',
+        'hiv' => 'integer',
+        'hbsag' => 'integer',
+        'hcv' => 'integer',
+        'rtpcr' => 'integer',
+        'other1' => 'string',
+        'other2' => 'string',
+        'other3' => 'string',
+        'other4' => 'string',
         'Ecg' => 'string',
+        'cardiacEcho' => 'string',
         'ChestXray' => 'string',
         'Other' => 'string',
         'status' => 'string'
@@ -158,7 +187,16 @@ class Laboratorydata extends Model
         'Rbs' => 'nullable|string|max:10',
         'Ppbs' => 'nullable|string|max:10',
         'Hba' => 'nullable|string|max:10',
-        'Ecg' => 'nullable|string',
+        'hiv' => 'nullable|integer',
+        'hbsag' => 'nullable|integer',
+        'hcv' => 'nullable|integer',
+        'rtpcr' => 'nullable|integer',
+        'other1' => 'required|string|max:256',
+        'other2' => 'nullable|string|max:256',
+        'other3' => 'nullable|string|max:256',
+        'other4' => 'nullable|string|max:256',
+        'Ecg' => 'nullable|string|max:256',
+        'cardiacEcho' => 'nullable|string',
         'ChestXray' => 'nullable|string',
         'Other' => 'nullable|string',
         'status' => 'nullable|string|max:10',
