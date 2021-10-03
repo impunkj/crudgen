@@ -64,10 +64,10 @@ class respcough extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'hlyy' => 'required|integer',
-        'hlmm' => 'required|integer',
-        'hldd' => 'required|integer',
-        'cause' => 'required|string',
+        'hlyy' => 'nullable|integer',
+        'hlmm' => 'nullable|integer',
+        'hldd' => 'nullable|integer',
+        'cause' => 'nullable|string',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

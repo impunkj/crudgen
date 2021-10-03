@@ -60,10 +60,10 @@ class cnsCognitive extends Model
      * @var array
      */
     public static $rules = [
-        'patientNo' => 'required|integer',
-        'MiniCogScore' => 'required|integer',
-        'PatientAten' => 'required|integer',
-        'PharseTest' => 'required|integer',
+        'patientNo' => 'nullable|integer',
+        'MiniCogScore' => 'nullable|integer',
+        'PatientAten' => 'nullable|integer',
+        'PharseTest' => 'nullable|integer',
     ];
 
     

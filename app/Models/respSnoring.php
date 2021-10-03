@@ -65,11 +65,11 @@ class respSnoring extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'stopBangScore' => 'required|integer',
-        'sleepStudy' => 'required|string|max:3',
-        'cpap' => 'required|string|max:3',
-        'OSAW' => 'required|string|max:3',
-        'duFSleep' => 'required|string|max:3',
+        'stopBangScore' => 'nullable|integer',
+        'sleepStudy' => 'nullable|string|max:3',
+        'cpap' => 'nullable|string|max:3',
+        'OSAW' => 'nullable|string|max:3',
+        'duFSleep' => 'nullable|string|max:3',
         'deleted_at' => 'nullable'
     ];
 

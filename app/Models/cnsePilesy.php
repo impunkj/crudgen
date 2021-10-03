@@ -76,14 +76,14 @@ class cnsePilesy extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'hlyy' => 'required|integer',
-        'hlmm' => 'required|integer',
-        'hldd' => 'required|integer',
+        'hlyy' => 'nullable|integer',
+        'hlmm' => 'nullable|integer',
+        'hldd' => 'nullable|integer',
         'lsyy' => 'nullable|integer',
         'lsmm' => 'nullable|integer',
         'lsdd' => 'nullable|integer',
         'medication' => 'nullable|string',
-        'Neurologyconsult' => 'required|string|max:3',
+        'Neurologyconsult' => 'nullable|string|max:3',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

@@ -61,7 +61,7 @@ class renalStones extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'SurgeryNeeded' => 'required|string|max:8',
+        'SurgeryNeeded' => 'nullable|string|max:8',
         'status' => 'nullable|string',
         'whatSurgery' => 'nullable|string',
         'deleted_at' => 'nullable',

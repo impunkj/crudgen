@@ -67,11 +67,11 @@ class cnsStroke extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'whyy' => 'required|integer',
-        'whmm' => 'required|integer',
-        'whdd' => 'required|integer',
-        'pStatus' => 'required|string',
-        'treatment' => 'required|string',
+        'whyy' => 'nullable|integer',
+        'whmm' => 'nullable|integer',
+        'whdd' => 'nullable|integer',
+        'pStatus' => 'nullable|string',
+        'treatment' => 'nullable|string',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
