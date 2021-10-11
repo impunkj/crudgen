@@ -61,7 +61,6 @@ class diabetes extends Model
         'howmuch' => 'string',
         'whatTreatment' => 'string',
         'rxtreat' => 'string',
-        'complications' => 'string',
         'dietcontrol' => 'string'
     ];
 

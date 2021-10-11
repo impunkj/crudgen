@@ -87,3 +87,6 @@ Route::resource('thyroids', '\App\Http\Controllers\API\thyroidAPIController');
 
 
 Route::resource('steroids', '\App\Http\Controllers\API\steroidAPIController');
+
+
+Route::resource('anaesthetichistories', '\App\Http\Controllers\API\anaesthetichistoryAPIController');
