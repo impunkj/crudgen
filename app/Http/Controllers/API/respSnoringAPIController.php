@@ -71,7 +71,8 @@ class respSnoringAPIController extends AppBaseController
     public function show($id)
     {
         /** @var respSnoring $respSnoring */
-        $respSnoring = $this->respSnoringRepository->find($id);
+        // $respSnoring = $this->respSnoringRepository->find($id);
+        $respSnoring = respSnoring::where('patientNo', $id)->first();
 
         if (empty($respSnoring)) {
             return $this->sendError('Resp Snoring not found');

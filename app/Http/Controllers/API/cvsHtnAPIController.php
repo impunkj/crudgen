@@ -72,6 +72,7 @@ class cvsHtnAPIController extends AppBaseController
     {
         /** @var cvsHtn $cvsHtn */
         $cvsHtn = $this->cvsHtnRepository->find($id);
+        $cvsHtn = cvsHtn::where('patientNo', $id)->first();
 
         if (empty($cvsHtn)) {
             return $this->sendError('Cvs Htn not found');

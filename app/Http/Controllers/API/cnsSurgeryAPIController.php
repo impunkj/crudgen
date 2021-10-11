@@ -71,7 +71,8 @@ class cnsSurgeryAPIController extends AppBaseController
     public function show($id)
     {
         /** @var cnsSurgery $cnsSurgery */
-        $cnsSurgery = $this->cnsSurgeryRepository->find($id);
+        // $cnsSurgery = $this->cnsSurgeryRepository->find($id);
+        $cnsSurgery = cnsSurgery::where('patientNo', $id)->first();
 
         if (empty($cnsSurgery)) {
             return $this->sendError('Cns Surgery not found');

@@ -71,7 +71,8 @@ class hepaticJaundiceAPIController extends AppBaseController
     public function show($id)
     {
         /** @var hepaticJaundice $hepaticJaundice */
-        $hepaticJaundice = $this->hepaticJaundiceRepository->find($id);
+        // $hepaticJaundice = $this->hepaticJaundiceRepository->find($id);
+        $hepaticJaundice = hepaticJaundice::where('patientNo', $id)->first();
 
         if (empty($hepaticJaundice)) {
             return $this->sendError('Hepatic Jaundice not found');

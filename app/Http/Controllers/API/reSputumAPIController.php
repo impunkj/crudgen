@@ -71,7 +71,8 @@ class reSputumAPIController extends AppBaseController
     public function show($id)
     {
         /** @var reSputum $reSputum */
-        $reSputum = $this->reSputumRepository->find($id);
+        // $reSputum = $this->reSputumRepository->find($id);
+        $reSputum = reSputum::where('patientNo', $id)->first();
 
         if (empty($reSputum)) {
             return $this->sendError('Re Sputum not found');

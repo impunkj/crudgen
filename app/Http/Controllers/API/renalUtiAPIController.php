@@ -72,6 +72,7 @@ class renalUtiAPIController extends AppBaseController
     {
         /** @var renalUti $renalUti */
         $renalUti = $this->renalUtiRepository->find($id);
+        $renalUti = renalUti::where('patientNo', $id)->first();
 
         if (empty($renalUti)) {
             return $this->sendError('Renal Uti not found');

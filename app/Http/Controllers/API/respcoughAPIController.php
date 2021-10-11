@@ -72,6 +72,7 @@ class respcoughAPIController extends AppBaseController
     {
         /** @var respcough $respcough */
         $respcough = $this->respcoughRepository->find($id);
+        $respcough = respcough::where('patientNo', $id)->first();
 
         if (empty($respcough)) {
             return $this->sendError('Respcough not found');

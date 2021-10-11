@@ -71,7 +71,8 @@ class cvsMiAPIController extends AppBaseController
     public function show($id)
     {
         /** @var cvsMi $cvsMi */
-        $cvsMi = $this->cvsMiRepository->find($id);
+        // $cvsMi = $this->cvsMiRepository->find($id);
+		$cvsMi = cvsMi::where('patientNo', $id)->first();
 
         if (empty($cvsMi)) {
             return $this->sendError('Cvs Mi not found');

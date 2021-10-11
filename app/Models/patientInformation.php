@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $gender
  * @property string $registerNumber
  * @property string $proposedOperation
+ * @property string $side
  * @property string $preOperativeDiagnosis
  * @property string $BP
  * @property string $HR
@@ -63,6 +64,7 @@ class patientInformation extends Model
         'gender',
         'registerNumber',
         'proposedOperation',
+        'side',
         'preOperativeDiagnosis',
         'BP',
         'HR',
@@ -93,6 +95,7 @@ class patientInformation extends Model
         'gender' => 'string',
         'registerNumber' => 'string',
         'proposedOperation' => 'string',
+        'side' => 'string',
         'preOperativeDiagnosis' => 'string',
         'BP' => 'string',
         'HR' => 'string',
@@ -122,6 +125,7 @@ class patientInformation extends Model
         'gender' => 'required|string|max:10',
         'registerNumber' => 'nullable|string|max:255',
         'proposedOperation' => 'nullable|string',
+        'side' => 'nullable|string|max:10',
         'preOperativeDiagnosis' => 'nullable|string',
         'BP' => 'required|string|max:56',
         'HR' => 'required|string|max:56',

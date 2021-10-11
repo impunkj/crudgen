@@ -72,6 +72,7 @@ class steroidAPIController extends AppBaseController
     {
         /** @var steroid $steroid */
         $steroid = $this->steroidRepository->find($id);
+        $steroid = steroid::where('patientNo', $id)->first();
 
         if (empty($steroid)) {
             return $this->sendError('Steroid not found');

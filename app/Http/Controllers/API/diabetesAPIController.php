@@ -71,7 +71,8 @@ class diabetesAPIController extends AppBaseController
     public function show($id)
     {
         /** @var diabetes $diabetes */
-        $diabetes = $this->diabetesRepository->find($id);
+        // $diabetes = $this->diabetesRepository->find($id);
+        $diabetes = diabetes::where('patientNo', $id)->first();
 
         if (empty($diabetes)) {
             return $this->sendError('Diabetes not found');

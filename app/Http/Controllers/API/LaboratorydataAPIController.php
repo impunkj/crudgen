@@ -71,8 +71,10 @@ class LaboratorydataAPIController extends AppBaseController
     public function show($id)
     {
         /** @var Laboratorydata $laboratorydata */
-        $laboratorydata = $this->laboratorydataRepository->find($id);
-
+		/// Call base on PatientID
+        // $laboratorydata = $this->laboratorydataRepository->where('patientNo', $id);
+        $laboratorydata = Laboratorydata::where('patientNo', $id)->first();
+		
         if (empty($laboratorydata)) {
             return $this->sendError('Laboratorydata not found');
         }

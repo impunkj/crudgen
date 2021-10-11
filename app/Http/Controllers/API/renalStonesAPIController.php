@@ -71,7 +71,8 @@ class renalStonesAPIController extends AppBaseController
     public function show($id)
     {
         /** @var renalStones $renalStones */
-        $renalStones = $this->renalStonesRepository->find($id);
+        // $renalStones = $this->renalStonesRepository->find($id);
+        $renalStones = renalStones::where('patientNo', $id)->first();
 
         if (empty($renalStones)) {
             return $this->sendError('Renal Stones not found');

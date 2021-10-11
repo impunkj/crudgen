@@ -71,7 +71,8 @@ class hepaticRefluxAPIController extends AppBaseController
     public function show($id)
     {
         /** @var hepaticReflux $hepaticReflux */
-        $hepaticReflux = $this->hepaticRefluxRepository->find($id);
+        // $hepaticReflux = $this->hepaticRefluxRepository->find($id);
+        $hepaticReflux = hepaticReflux::where('patientNo', $id)->first();
 
         if (empty($hepaticReflux)) {
             return $this->sendError('Hepatic Reflux not found');

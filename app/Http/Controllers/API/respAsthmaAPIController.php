@@ -72,6 +72,7 @@ class respAsthmaAPIController extends AppBaseController
     {
         /** @var respAsthma $respAsthma */
         $respAsthma = $this->respAsthmaRepository->find($id);
+        $respAsthma = respAsthma::where('patientNo', $id)->first();
 
         if (empty($respAsthma)) {
             return $this->sendError('Resp Asthma not found');

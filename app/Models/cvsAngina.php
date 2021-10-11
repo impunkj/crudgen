@@ -76,13 +76,13 @@ class cvsAngina extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'status' => 'required|string|max:8',
-        'takingTreatment' => 'required|integer',
-        'causeAngina' => 'required|string',
-        'howItStop' => 'required|string',
-        'dtyy' => 'required|integer',
-        'dtmm' => 'required|integer',
-        'dtdd' => 'required|integer'
+        'status' => 'nullable|string|max:8',
+        'takingTreatment' => 'nullable|integer',
+        'causeAngina' => 'nullable|string',
+        'howItStop' => 'nullable|string',
+        'dtyy' => 'nullable|integer',
+        'dtmm' => 'nullable|integer',
+        'dtdd' => 'nullable|integer'
     ];
 
     

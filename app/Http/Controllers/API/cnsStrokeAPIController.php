@@ -72,6 +72,7 @@ class cnsStrokeAPIController extends AppBaseController
     {
         /** @var cnsStroke $cnsStroke */
         $cnsStroke = $this->cnsStrokeRepository->find($id);
+        $cnsStroke = cnsStroke::where('patientNo', $id)->first();
 
         if (empty($cnsStroke)) {
             return $this->sendError('Cns Stroke not found');

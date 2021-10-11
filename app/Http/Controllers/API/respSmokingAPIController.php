@@ -71,7 +71,8 @@ class respSmokingAPIController extends AppBaseController
     public function show($id)
     {
         /** @var respSmoking $respSmoking */
-        $respSmoking = $this->respSmokingRepository->find($id);
+        // $respSmoking = $this->respSmokingRepository->find($id);
+        $respSmoking = respSmoking::where('patientNo', $id)->first();
 
         if (empty($respSmoking)) {
             return $this->sendError('Resp Smoking not found');

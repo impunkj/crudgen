@@ -71,7 +71,8 @@ class cnsCognitiveAPIController extends AppBaseController
     public function show($id)
     {
         /** @var cnsCognitive $cnsCognitive */
-        $cnsCognitive = $this->cnsCognitiveRepository->find($id);
+        // $cnsCognitive = $this->cnsCognitiveRepository->find($id);
+        $cnsCognitive = cnsCognitive::where('patientNo', $id)->first();
 
         if (empty($cnsCognitive)) {
             return $this->sendError('Cns Cognitive not found');

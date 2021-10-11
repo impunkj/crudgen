@@ -71,7 +71,8 @@ class thyroidAPIController extends AppBaseController
     public function show($id)
     {
         /** @var thyroid $thyroid */
-        $thyroid = $this->thyroidRepository->find($id);
+        // $thyroid = $this->thyroidRepository->find($id);
+        $thyroid = thyroid::where('patientNo', $id)->first();
 
         if (empty($thyroid)) {
             return $this->sendError('Thyroid not found');

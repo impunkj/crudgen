@@ -72,6 +72,8 @@ class cvsAnginaAPIController extends AppBaseController
     {
         /** @var cvsAngina $cvsAngina */
         $cvsAngina = $this->cvsAnginaRepository->find($id);
+        $cvsAngina = cvsAngina::where('patientNo', $id)->first();
+		
 
         if (empty($cvsAngina)) {
             return $this->sendError('Cvs Angina not found');

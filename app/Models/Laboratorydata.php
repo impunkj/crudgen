@@ -115,7 +115,7 @@ class Laboratorydata extends Model
      * @var array
      */
     protected $casts = [
-        'recNo' => 'integer',
+        'id' => 'integer',
         'patientNo' => 'integer',
         'totalBill' => 'string',
         'dirBill' => 'string',

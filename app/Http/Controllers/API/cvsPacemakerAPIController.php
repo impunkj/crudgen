@@ -71,7 +71,8 @@ class cvsPacemakerAPIController extends AppBaseController
     public function show($id)
     {
         /** @var cvsPacemaker $cvsPacemaker */
-        $cvsPacemaker = $this->cvsPacemakerRepository->find($id);
+        // $cvsPacemaker = $this->cvsPacemakerRepository->find($id);
+        $cvsPacemaker = cvsPacemaker::where('patientNo', $id)->first();	
 
         if (empty($cvsPacemaker)) {
             return $this->sendError('Cvs Pacemaker not found');

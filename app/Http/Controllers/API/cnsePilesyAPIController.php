@@ -71,7 +71,8 @@ class cnsePilesyAPIController extends AppBaseController
     public function show($id)
     {
         /** @var cnsePilesy $cnsePilesy */
-        $cnsePilesy = $this->cnsePilesyRepository->find($id);
+        // $cnsePilesy = $this->cnsePilesyRepository->find($id);
+        $cnsePilesy = cnsePilesy::where('patientNo', $id)->first();///cnsePilesy
 
         if (empty($cnsePilesy)) {
             return $this->sendError('Cnse Pilesy not found');

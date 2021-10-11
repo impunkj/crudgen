@@ -71,7 +71,8 @@ class cvsNyhaAPIController extends AppBaseController
     public function show($id)
     {
         /** @var cvsNyha $cvsNyha */
-        $cvsNyha = $this->cvsNyhaRepository->find($id);
+        // $cvsNyha = $this->cvsNyhaRepository->find($id);
+        $cvsNyha = cvsNyha::where('patientNo', $id)->first();
 
         if (empty($cvsNyha)) {
             return $this->sendError('Cvs Nyha not found');

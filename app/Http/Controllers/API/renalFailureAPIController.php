@@ -71,7 +71,8 @@ class renalFailureAPIController extends AppBaseController
     public function show($id)
     {
         /** @var renalFailure $renalFailure */
-        $renalFailure = $this->renalFailureRepository->find($id);
+        // $renalFailure = $this->renalFailureRepository->find($id);
+		$renalFailure = renalFailure::where('patientNo', $id)->first();
 
         if (empty($renalFailure)) {
             return $this->sendError('Renal Failure not found');
