@@ -19,7 +19,7 @@ class patientReportAPIController extends AppBaseController
 	public function generatePDFreport(Request $request){
 	  
       $patientID = $request->patientID;	  
-	  $pationinfo = patientInformation::where('patientNo', $patientID)->first();
+	  $pationinfo = patientInformation::where('id', $patientID)->first();
 	  $data = $pationinfo->getOriginal();
 	  $now = \Carbon\Carbon::now();	
 	  $curent_date =  $now->format('Y-m-d');

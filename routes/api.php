@@ -90,3 +90,9 @@ Route::resource('steroids', '\App\Http\Controllers\API\steroidAPIController');
 
 
 Route::resource('anaesthetichistories', '\App\Http\Controllers\API\anaesthetichistoryAPIController');
+
+
+Route::resource('physical_exams', '\App\Http\Controllers\API\physicalExamAPIController');
+
+
+Route::post('getallmedications', '\App\Http\Controllers\API\Medications@index');

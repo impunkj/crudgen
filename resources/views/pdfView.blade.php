@@ -76,29 +76,40 @@ table th {
             <p style="text-align: center; font-weight:bold; font-size: 18px;"> Pre Operative Anesthetic Evaluation </p>
             <table>
                 <tr>
-                    <th colspan="5"> PreOp Diagnosis: </th>
+                    <th style="border-right: none !important;"> PreOp Diagnosis: </th>
+                    <th style="border-left: none !important; border-right: none !important;"></th>
+                    <th style="border-left: none !important; border-right: none !important;"></th>
+                    <th style="border-left: none !important; border-right: none !important;"></th>
+                    <th style="border-left: none !important;"></th>
                 </tr>
                 <tr>
-                    <th colspan="5"> Planned Procedure: Liver Transplant </th>
+                    <th  style="border-right: none !important;"> Planned Procedure: Liver Transplant </th>
+                    <th style="border-left: none !important; border-right: none !important;"></th>
+                    <th style="border-left: none !important; border-right: none !important;"></th>
+                    <th style="border-left: none !important; border-right: none !important;"></th>
+                    <th style="border-left: none !important;"></th>
                 </tr>
                 <tr>
-                    <th> Age: 40yr </th>
-                    <th> Sex : <?php echo $gender ?> </th>
-                    <th> Ht: <?php  echo $height; ?></th>
-                    <th> Wt: <?php  echo $weight; ?></th>
-                    <th> BMI: <?php  echo $BMI; ?></th>
+                    <th style="width:45%"> Age: 40yr </th>
+                    <th> Sex : {{$gender}} </th>
+                    <th> Ht: {{$height}}</th>
+                    <th> Wt: {{$weight}}</th>
+                    <th> BMI: {{$BMI}}</th>
                 </tr>
             </table>
         </div>
         <div class="col-md-6 second-col">
             <table class="without-border-table" style="border: 1px solid #a5a5a5;">
                 <tr>
-                    <th colspan="4" style="border-bottom: 1px solid #a5a5a5 !important;"> Facility </th>
+                    <th style="border-bottom: 1px solid #a5a5a5  !important;"> Facility </th>
+                    <th style="border-bottom: 1px solid #a5a5a5 !important;"></th>
+                    <th style="border-bottom: 1px solid #a5a5a5 !important;"></th>
+                    <th style="border-bottom: 1px solid #a5a5a5 !important;"></th>
+                    <th style="border-bottom: 1px solid #a5a5a5 !important;"></th>
                 </tr>
-		
                 <tr>
-                    <th> Patienst Name: </th>
-                    <td><?php echo $name ?></td>
+                    <th> Patient Name: </th>
+                    <td> {{$name}} </td>
                     <td></td>
                     <td> </td>
                 </tr>
@@ -120,8 +131,6 @@ table th {
                     <td></td>
                     <td> </td>
                 </tr>
-		
-		        
             </table>
         </div>
 
