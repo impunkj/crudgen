@@ -85,18 +85,18 @@ class respAsthma extends Model
      * @var array
      */
     public static $rules = [
-        'patientNo' => 'required|integer',
-        'whatCause' => 'required|string',
-        'treatment' => 'required|string',
-        'hlyy' => 'required|integer',
-        'hlmm' => 'required|integer',
-        'hldd' => 'required|integer',
-        'layy' => 'required|integer',
-        'lamm' => 'required|integer',
-        'ladd' => 'required|integer',
-        'howDoyouTreat' => 'required|string|max:12',
-        'urti' => 'required|string|max:3',
-        'advised' => 'required|integer',
+        'patientNo' => 'nullable|integer',
+        'whatCause' => 'nullable|string',
+        'treatment' => 'nullable|string',
+        'hlyy' => 'nullable|integer',
+        'hlmm' => 'nullable|integer',
+        'hldd' => 'nullable|integer',
+        'layy' => 'nullable|integer',
+        'lamm' => 'nullable|integer',
+        'ladd' => 'nullable|integer',
+        'howDoyouTreat' => 'nullable|string|max:12',
+        'urti' => 'nullable|string|max:3',
+        'advised' => 'nullable|integer',
         'deleted_at' => 'nullable'
     ];
 

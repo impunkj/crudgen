@@ -95,4 +95,8 @@ Route::resource('anaesthetichistories', '\App\Http\Controllers\API\anaesthetichi
 Route::resource('physical_exams', '\App\Http\Controllers\API\physicalExamAPIController');
 
 
-Route::post('getallmedications', '\App\Http\Controllers\API\Medications@index');
+Route::get('getallmedications/{id}', '\App\Http\Controllers\API\Medications@index');
+
+Route::resource('covids', '\App\Http\Controllers\API\covidAPIController');
+
+Route::resource('fralities', '\App\Http\Controllers\API\fralityAPIController');

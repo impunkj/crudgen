@@ -84,9 +84,9 @@
   ),
   'roboto' => array(
     '300' => $fontDir . '/roboto_300_63997f40a76c2dd9af9443d525b8d09e',
-    'normal' => $fontDir . '/roboto_normal_b7834828abc03e1e6aa6b18153302986',
-    '500' => $fontDir . '/roboto_500_5b3c79ece21316b561c744d8a9b76cc0',
-    'bold' => $fontDir . '/roboto_bold_b4400ac3b4e1259cdd28b50034d0e297',
-    '900' => $fontDir . '/roboto_900_1c46e621c500eae3ec07c3a204f0bc08',
+    'normal' => $fontDir . '/roboto_normal_ea8a516f74db1359b3df4ecad83b7f3b',
+    '500' => $fontDir . '/roboto_500_5f9df759bbe37a113d7d94b26335edef',
+    'bold' => $fontDir . '/roboto_bold_5de0bf436581c52a65958c3e004cf0a1',
+    '900' => $fontDir . '/roboto_900_fcc733cd9533166eb05c9ff039eeaaf1',
   ),
 ) ?>

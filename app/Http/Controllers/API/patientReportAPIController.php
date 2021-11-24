@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Models\patientInformation;
+use App\Models\Laboratorydata;
+use App\Models\cvsHtn;
 use Illuminate\Http\Request;
 use PDF;
 use Illuminate\Support\Facades\File;
@@ -20,10 +22,18 @@ class patientReportAPIController extends AppBaseController
 	  
       $patientID = $request->patientID;	  
 	  $pationinfo = patientInformation::where('id', $patientID)->first();
-	  $data = $pationinfo->getOriginal();
+	  $Laboratorydata = Laboratorydata::where('patientNo', $patientID)->first();
+	  $Htn = cvsHtn::where('patientNo', $patientID)->first();
+	  $data = array(
+		'patientInfo' => $pationinfo,
+		'Laboratorydata' => $Laboratorydata,
+		'Htn' => $Htn
+	  );
+	  // $data = $pationinfo->getOriginal();
 	  $now = \Carbon\Carbon::now();	
 	  $curent_date =  $now->format('Y-m-d');
 	  view()->share('patients',$data);
+	  
       $pdf = PDF::loadView('pdfView', $data);
 	  $pathtosaved = public_path().'/pdf/patientID' . $patientID . '/';
 	  File::makeDirectory($pathtosaved, $mode = 0777, true, true);

@@ -66,12 +66,12 @@ class respSmoking extends Model
      * @var array
      */
     public static $rules = [
-        'patientNo' => 'required|integer',
-        'howmany' => 'required|string',
-        'whenStop' => 'required|string',
-        'hlyy' => 'required|integer',
-        'hlmm' => 'required|integer',
-        'hldd' => 'required|integer',
+        'patientNo' => 'nullable|integer',
+        'howmany' => 'nullable|string',
+        'whenStop' => 'nullable|string',
+        'hlyy' => 'nullable|integer',
+        'hlmm' => 'nullable|integer',
+        'hldd' => 'nullable|integer',
         'deleted_at' => 'nullable'
     ];
 
