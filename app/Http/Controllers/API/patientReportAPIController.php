@@ -7,6 +7,8 @@ use Response;
 use App\Models\patientInformation;
 use App\Models\Laboratorydata;
 use App\Models\cvsHtn;
+use App\Models\cvsMi;
+use App\Models\cvsAngina;
 use Illuminate\Http\Request;
 use PDF;
 use Illuminate\Support\Facades\File;
@@ -24,10 +26,15 @@ class patientReportAPIController extends AppBaseController
 	  $pationinfo = patientInformation::where('id', $patientID)->first();
 	  $Laboratorydata = Laboratorydata::where('patientNo', $patientID)->first();
 	  $Htn = cvsHtn::where('patientNo', $patientID)->first();
+	  $cvsAngina = cvsAngina::where('patientNo', $patientID)->first();
+	  $cvsMi = cvsMi::where('patientNo', $patientID)->first();
+	  $cvsMi = cvsMi::where('patientNo', $patientID)->first();
 	  $data = array(
-		'patientInfo' => $pationinfo,
+		'pationinfo' => $pationinfo,
 		'Laboratorydata' => $Laboratorydata,
-		'Htn' => $Htn
+		'Htn' => $Htn,
+		'cvsAngina' => $cvsAngina,
+		'cvsMi' => $cvsMi,
 	  );
 	  // $data = $pationinfo->getOriginal();
 	  $now = \Carbon\Carbon::now();	
