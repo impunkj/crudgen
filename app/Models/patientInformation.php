@@ -86,7 +86,7 @@ class patientInformation extends Model
     protected $casts = [
         'patientNo' => 'integer',
         'dateOfAdmission' => 'datetime',
-        'timeOfAdmission' => 'string',
+        'timeOfAdmission' => 'datetime',
         'hospitalName' => 'string',
         'age' => 'integer',
         'pincode' => 'integer',
@@ -116,7 +116,7 @@ class patientInformation extends Model
      */
     public static $rules = [
         'dateOfAdmission' => 'nullable',
-        'timeOfAdmission' => 'nullable|string|max:30',
+        'timeOfAdmission' => 'nullable',
         'hospitalName' => 'nullable|string|max:25',
         'age' => 'required|integer',
         'pincode' => 'nullable|integer',

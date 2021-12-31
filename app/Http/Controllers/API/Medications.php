@@ -16,9 +16,9 @@ use Response;
 
 class Medications extends AppBaseController
 {
-	function index(Request $request){
+	function index($id){
 		
-		echo 'ddd';
-		
+			
+			
 	}
 }
