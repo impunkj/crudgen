@@ -75,9 +75,9 @@ class hepaticJaundice extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'whyy' => 'nullable|integer',
-        'whmm' => 'nullable|integer',
-        'whdd' => 'nullable|integer',
+        'whyy' => 'nullable',
+        'whmm' => 'nullable',
+        'whdd' => 'nullable',
         'needHospital' => 'nullable|boolean',
         'cause' => 'nullable|string',
         'viralStatus' => 'nullable|string',

@@ -69,9 +69,9 @@ class respSmoking extends Model
         'patientNo' => 'nullable|integer',
         'howmany' => 'nullable|string',
         'whenStop' => 'nullable|string',
-        'hlyy' => 'nullable|integer',
-        'hlmm' => 'nullable|integer',
-        'hldd' => 'nullable|integer',
+        'hlyy' => 'nullable',
+        'hlmm' => 'nullable',
+        'hldd' => 'nullable',
         'deleted_at' => 'nullable'
     ];
 

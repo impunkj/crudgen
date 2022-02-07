@@ -80,9 +80,9 @@ class cvsAngina extends Model
         'takingTreatment' => 'nullable|integer',
         'causeAngina' => 'nullable|string',
         'howItStop' => 'nullable|string',
-        'dtyy' => 'nullable|integer',
-        'dtmm' => 'nullable|integer',
-        'dtdd' => 'nullable|integer'
+        'dtyy' => 'nullable',
+        'dtmm' => 'nullable',
+        'dtdd' => 'nullable'
     ];
 
     

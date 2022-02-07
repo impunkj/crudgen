@@ -67,10 +67,10 @@ class cvsHtn extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'hlyy' => 'nullable|integer',
-        'hlmm' => 'nullable|integer',
-        'hldd' => 'nullable|integer',
-        'stress' => 'nullable|integer',
+        'hlyy' => 'nullable',
+        'hlmm' => 'nullable',
+        'hldd' => 'nullable',
+        'stress' => 'nullable',
         'treatment' => 'nullable|string'
     ];
 

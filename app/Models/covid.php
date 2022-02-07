@@ -80,9 +80,9 @@ class covid extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'whyy' => 'nullable|integer',
-        'whmm' => 'nullable|integer',
-        'whdd' => 'nullable|integer',
+        'whyy' => 'nullable',
+        'whmm' => 'nullable',
+        'whdd' => 'nullable',
         'wherePlace' => 'nullable|string|max:20',
         'treatment' => 'nullable|string',
         'resp' => 'nullable|string|max:10',

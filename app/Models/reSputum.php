@@ -75,14 +75,14 @@ class reSputum extends Model
      */
     public static $rules = [
         'patientNo' => 'required|integer',
-        'hlyy' => 'nullable|integer',
-        'hlmm' => 'nullable|integer',
-        'hldd' => 'nullable|integer',
+        'hlyy' => 'nullable',
+        'hlmm' => 'nullable',
+        'hldd' => 'nullable',
         'color' => 'nullable|string|max:255',
         'treatment' => 'nullable|string',
-        'thlyy' => 'nullable|integer',
-        'thlmm' => 'nullable|integer',
-        'thldd' => 'nullable|integer',
+        'thlyy' => 'nullable',
+        'thlmm' => 'nullable',
+        'thldd' => 'nullable',
         'deleted_at' => 'nullable',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'
