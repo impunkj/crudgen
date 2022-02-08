@@ -73,9 +73,6 @@ class cvsPacemaker extends Model
         'patientNo' => 'required|integer',
         'why' => 'required|string',
         'pacemakerType' => 'required|string',
-        'whyy' => 'required',
-        'whmm' => 'required',
-        'whdd' => 'required',
         'ckpaperwork' => 'required|integer'
     ];
 
