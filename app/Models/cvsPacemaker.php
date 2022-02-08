@@ -58,9 +58,9 @@ class cvsPacemaker extends Model
         'patientNo' => 'integer',
         'why' => 'string',
         'pacemakerType' => 'string',
-        'whyy' => 'datetime',
-        'whmm' => 'datetime',
-        'whdd' => 'datetime',
+        'whyy' => 'string',
+        'whmm' => 'string',
+        'whdd' => 'string',
         'ckpaperwork' => 'integer'
     ];
 
